@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriRS - Projetos</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/projetos.css">
+    <link rel="stylesheet" href="../css/vars.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <script src="../javascripts/layout.js" defer></script>
+    <script src="../javascripts/projetos.js" defer></script>
+    <script src="https://kit.fontawesome.com/5e96e72d2d.js" crossorigin="anonymous"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        
+        /* Estilos para garantir que os cards apareçam */
+        .cardsProjetos {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            min-height: 300px;
+        }
+        
+        .cardsProjetos.vazia {
+            display: none;
+        }
+        
+        .PROJETOScard {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            background-color: #2E6A50;
+            height: 18.75rem;
+            width: 12.5rem;
+            border-radius: 10px;
+            margin: 1.25rem;
+            transition: transform 0.3s ease;
+            font-size: 1rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .card-link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .cardText {
+            border-radius: 10px;
+            background-color: #3F936E;
+            width: 100%;
+            height: 6.25rem;
+            position: relative;
+            z-index: 1;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .cardText p {
+            margin: 0;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.3;
+            max-height: calc(1.3em * 3);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .PROJETOScard:hover {
+            transform: scale(1.05);
+        }
+        
+        .carregando {
+            opacity: 0.6;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios" />
+</head>
+
+<body>
+
+    <div id="header-socket"></div>
+
+    <div class="container">
+        <!-- Carrossel com link para o projeto CONAB -->
+        <a href="../pages/projetoCONAB.html?project=conab" title="Mapeamento de áreas agrícolas junto a CONAB" class="carrossel-link">
+            <div class="carrosel">
+                <img src="../public/img/projetos/Carrosel.png" alt="Sistemas de Irrigação Inteligente" class="carrosel-img">
+                <div class="carroselText">
+                    <h2>Mapeamento de áreas agrícolas junto a CONAB</h2>
+                    <p>O AgriRS integra um projeto firmado entre a Companhia Nacional de Abastecimento (Conab) e o Instituto Nacional de Pesquisas Espaciais (INPE)</p>
+                </div>
+            </div>
+        </a>
+
+        <h2>PROJETOS</h2>
+        
+        <!-- Containers vazios que serão preenchidos pelo JavaScript -->
+        <div class="cardsProjetos vazia" id="cardsLinha1">
+            <!-- JavaScript vai preencher aqui -->
+        </div>
+
+        <div class="cardsProjetos vazia" id="cardsLinha2">
+            <!-- JavaScript vai preencher aqui -->
+        </div>
+        
+        <br>
+    </div>
+    <div id="footer-socket"></div>
+
+    <script>
+        // Script de fallback que só roda se o JavaScript principal falhar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Espera um pouco para ver se o JavaScript principal carregou
+            setTimeout(() => {
+                if (typeof ProjetosManager === 'undefined') {
+                    console.log('JavaScript principal não carregou - ativando fallback');
+                    ativarFallback();
+                } else {
+                    console.log('JavaScript principal carregou corretamente');
+                    // Remove a classe 'vazia' para mostrar os containers
+                    document.getElementById('cardsLinha1').classList.remove('vazia');
+                    document.getElementById('cardsLinha2').classList.remove('vazia');
+                }
+            }, 500);
+        });
+
+        function ativarFallback() {
+            const projetosFallback = [
+                {
+                    id: "cobertura-solo",
+                    titulo: "Estimativa do Percentual de Cobertura do Solo",
+                    descricao: "Estimativa do Percentual de Cobertura do Solo por Resíduos Culturais através de Sensoriamento Remoto Orbital",
+                    imagem: "../public/img/Figura_P1_PS.png",
+                    link: "../pages/projetoCONAB.html?project=cobertura-solo"
+                },
+                {
+                    id: "desmatamento-cerrado", 
+                    titulo: "Detecção de Desmatamento",
+                    descricao: "Detecção de Desmatamento e Cicatriz de Fogo no Cerrado via Redes Neurais Artificiais.",
+                    imagem: "../public/img/Figura_P2_MG.JPG",
+                    link: "../pages/projetoCONAB.html?project=desmatamento-cerrado"
+                },
+                {
+                    id: "mapeamento-cultivos",
+                    titulo: "Monitoramento de culturas agrícolas",
+                    descricao: "O AgriRS realiza o monitoramento e o mapeamento das principais culturas agrícolas cultivadas no Brasil.",
+                    imagem: "../public/img/projetos/Projeto 3.jpg",
+                    link: "../pages/projetoCONAB.html?project=mapeamento-cultivos"
+                },
+                {
+                    id: "alteracoes-uso-terra",
+                    titulo: "Detecção de alterações no uso da terra",
+                    descricao: "O AgriRS aplica técnicas de sensoriamento remoto para detectar alterações no uso da terra, como desmatamentos",
+                    imagem: "../public/img/projetos/Projeto 4.jpg",
+                    link: "../pages/projetoCONAB.html?project=alteracoes-uso-terra"
+                },
+                {
+                    id: "impactos-agricultura",
+                    titulo: "Impactos da Agricultura na Floresta", 
+                    descricao: "Monitoramento via Sensoriamento Remoto: Impactos da Agricultura na Floresta.",
+                    imagem: "../public/img/projetos/Projeto 5.jpg",
+                    link: "../pages/projetoCONAB.html?project=impactos-agricultura"
+                },
+                {
+                    id: "acompanhamento-frutas",
+                    titulo: "Acompanhamento de Frutas por Imagens",
+                    descricao: "Tecnologia e Agricultura: Acompanhamento de Frutas por Imagens.",
+                    imagem: "../public/img/projetos/Projeto 6.jpg", 
+                    link: "../pages/projetoCONAB.html?project=acompanhamento-frutas"
+                }
+            ];
+
+            const linha1 = document.getElementById('cardsLinha1');
+            const linha2 = document.getElementById('cardsLinha2');
+            
+            // Remove classe vazia
+            linha1.classList.remove('vazia');
+            linha2.classList.remove('vazia');
+            
+            // Preenche primeira linha (3 primeiros projetos)
+            for (let i = 0; i < 3; i++) {
+                if (projetosFallback[i]) {
+                    const projeto = projetosFallback[i];
+                    const card = criarCardFallback(projeto);
+                    linha1.appendChild(card);
+                }
+            }
+            
+            // Preenche segunda linha (3 últimos projetos)
+            for (let i = 3; i < 6; i++) {
+                if (projetosFallback[i]) {
+                    const projeto = projetosFallback[i];
+                    const card = criarCardFallback(projeto);
+                    linha2.appendChild(card);
+                }
+            }
+            
+            console.log('Fallback ativado - cards carregados na ordem correta');
+        }
+
+        function criarCardFallback(projeto) {
+            const card = document.createElement('div');
+            card.className = 'PROJETOScard';
+            
+            card.innerHTML = `
+                <a href="${projeto.link}" title="${projeto.titulo}" class="card-link">
+                    <img src="${projeto.imagem}" alt="${projeto.titulo}" class="card-img">
+                    <div class="cardText">
+                        <p>${projeto.descricao}</p>
+                    </div>
+                </a>
+            `;
+            
+            return card;
+        }
+    </script>
+
+</body>
+
+</html>

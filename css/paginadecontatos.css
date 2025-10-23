@@ -1,0 +1,81 @@
+.contatos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    width: 1000px;
+}
+
+
+.card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 40px 0px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .contatos {
+        width: 90%;   
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
+.card:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: (-5px);
+}
+
+.card.localizacao, .card.contatoInfo {
+    flex: 1 1 100%; 
+}
+
+.campoForm{
+    margin-bottom: 8px;
+}
+
+.campoForm input,
+.campoForm textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    transition:  0.3s ease, 0.3s ease;
+}
+
+.campoForm textarea{
+    min-height: 200px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(136, 211, 152, 0.9,); 
+  outline: none;
+  box-shadow: 0 0 5px rgba(136, 211, 152, 0.9);
+}
+
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #dc3545;
+}
+
+.card.contatoInfo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.map iframe{
+    width: 100%;
+}

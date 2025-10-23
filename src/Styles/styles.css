@@ -1,0 +1,255 @@
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    font-family: "Kanit";
+    /* hide page overflow so only the iframe content scrolls if needed */
+    overflow: hidden;
+}
+
+
+
+.header > nav {
+    display: flex;
+    justify-content: row;
+    justify-content: space-between;
+
+}
+
+
+.logo{
+    margin-top: 20px;
+}
+
+
+
+.footer{
+
+display: inline-flex;
+
+
+}
+
+header{
+      display: flex;
+    justify-content: center;
+    
+    /* background-color:#2E6A50; */
+    background-image: linear-gradient(180deg, #2E6A50 0%, #41C089 73%);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.header{
+    width: 900px;
+}
+
+
+
+
+
+
+
+#leftArrow{
+    transform: scaleX(-1);
+}
+
+.material-symbols-outlined{
+    margin-top: 55px;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.container > *{
+
+    width: 900px;
+}
+
+.container > section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.carrosel{
+    display: flex;
+    justify-content: space-between;
+    background-color: #dfdfdf;
+    height: 20vh;
+    margin-bottom: 20px ;
+   
+
+@media (max-width: 768px) {
+    .carrosel{ height: 14vh; }
+    .PROJETOScard, .PUBLICACOEScard { width: 45%; height: auto; }
+    .cardsProjetos, .cardsPublicacoes { flex-wrap: wrap; gap: 8px; }
+    .card { width: 48px; height: 60px; }
+}
+
+@media (max-width: 420px) {
+    .PROJETOScard, .PUBLICACOEScard { width: 100%; }
+    .material-symbols-outlined { margin-top: 10px; }
+}
+}
+
+.PROJETOScard{
+    background-color: #2E6A50;
+    height: 300px;
+    width: 200px;
+    border: solid;
+    display: flex;
+    margin: 20px;
+    
+}
+
+.cardsProjetos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.PUBLICACOEScard{
+      background-color: #2E6A50;
+    height: 300px;
+    width: 200px;
+    border: solid;
+    display: flex;
+    margin: 20px;
+    
+
+}
+
+.cardsPublicacoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    font-size: large;
+    border-radius: 50px;
+    /* transform: scale(1.2); */
+    height: 50px;
+    width: 150px;
+
+}
+
+.card{
+         background-color: #2E6A50;
+    height: 100px;
+    width: 75px;
+    border: solid;
+    display: flex;
+    margin: 20px;
+    
+}
+
+.equipeCarrosel{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.formSection{
+    display: flex;
+    
+    
+
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+    
+}
+
+
+.buttonForm{
+    display: flex;
+    justify-content: center;
+}
+
+#assuntoBox > form{
+    height: 100px ;
+    
+
+} 
+
+form > input{
+    width: 300px;
+}
+
+footer{
+display: flex;
+justify-content: space-around;
+background-image: linear-gradient(180deg, #154430 0%, #3F936E 100%);
+color: white;
+padding: 30px;
+
+
+}
+
+a{
+    text-decoration: none;
+}
+
+#footer1{
+    transform: scale(1.5);
+}
+
+#footer3{
+    display: flex;
+    align-items: column;
+    width: 300px;
+}
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.localizacao {
+    border: 2px solid black;
+    width: 870px;
+    height: 1080px;
+    margin-top: 200px;
+}
+
+.contatos {
+    display: flex;
+    justify-content: center;
+}
+
+.contatoInfo {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 870px;
+    height: 1080px;
+}
+
+/* Make any top-level iframe fill the remaining space between header and footer */
+iframe{
+        flex: 1 1 auto; /* grow to fill available space */
+        width: 100%;
+        min-height: 0; /* allow flex child to shrink properly and avoid overflow */
+        height: auto;
+        border: 0;
+        display: block;
+}
+

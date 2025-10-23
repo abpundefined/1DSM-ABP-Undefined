@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriRS - Projeto</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/projetos.css">
+    <link rel="stylesheet" href="../css/projetoCONAB.css">
+    <link rel="stylesheet" href="../css/vars.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <script src="../javascripts/layout.js" defer></script>
+    <script src="../javascripts/projetos.js" defer></script>
+    <script src="https://kit.fontawesome.com/5e96e72d2d.js" crossorigin="anonymous"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        
+        /* Estilos para garantir que o conteúdo seja atualizado dinamicamente */
+        .projeto-conteudo h1,
+        .projeto-descricao,
+        .projeto-info {
+            transition: opacity 0.3s ease;
+        }
+        
+        .carregando {
+            opacity: 0.6;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios" />
+</head>
+
+<body>
+
+    <div id="header-socket"></div>
+
+    <div class="container">
+        <div class="carrosel">
+            <img src="../public/img/projetos/Carrosel.png" alt="Projeto" class="carrosel-img" id="carrossel-imagem">
+        </div>
+
+        <div class="projeto-conteudo">
+            <h1 id="projeto-titulo">Carregando projeto...</h1>
+            
+            <div class="projeto-descricao" id="projeto-descricao">
+                <p>Carregando descrição do projeto...</p>
+            </div>
+            
+            <div class="projeto-info" id="projeto-info">
+                <div class="info-item">
+                    <h3>Carregando...</h3>
+                    <p>Carregando informações...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <a href="../pages/projetos.html" title="Mais Projetos">
+                <button type="button">Mais Projetos</button>
+            </a>
+        </div>
+    </div>
+    
+    <div id="footer-socket"></div>
+
+</body>
+
+</html>

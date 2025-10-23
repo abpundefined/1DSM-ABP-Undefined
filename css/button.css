@@ -1,0 +1,26 @@
+/* botão padrão */
+
+button{
+    font-size: large;
+    border-radius: 50px;
+    /* transform: scale(1.2); */
+    height: 50px;
+    width: 150px;
+    padding: 10px;
+    background-color: #DFFFE5;
+    border: 1px solid #005b11;
+    cursor: pointer;    
+}
+
+button:hover{
+ font-size: large;
+    border-radius: 50px;
+    /* transform: scale(1.2); */
+    height: 50px;
+    width: 150px;
+    padding: 10px;
+    background-color: var(--dark-blue-color);
+    border: 1px solid var(--dark-blue-color);
+    color: white;
+
+}

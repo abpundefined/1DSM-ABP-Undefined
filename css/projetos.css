@@ -1,0 +1,222 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carrosel a,
+.PROJETOScard a,
+.cardText a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carrosel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #dfdfdf;
+    background-size: 100%;
+    height: 35vh;
+    margin-bottom: 1.25rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.carrosel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.carroselText {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #3f936f8a;
+    width: 100%;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    z-index: 1;
+    transition: 200ms;
+    font-size: 1.25rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.carroselText:hover {
+    transform: scale(1.02);
+}
+
+.PROJETOScard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.PROJETOScard {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #2E6A50;
+    height: 18.75rem;
+    width: 12.5rem;
+    border-radius: 10px;
+    margin: 1.25rem;
+    transition: 200ms;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}   
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+}
+
+.PROJETOScard:hover {
+    transform: scale(1.2);
+}
+
+.cardsProjetos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardText {
+    border-radius: 10px;
+    background-color: #3F936E;
+    width: 12.875rem;
+    height: 6.25rem;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.cardText p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    max-height: calc(1.3em * 3);
+    width: 100%;
+}
+
+.cardsProjetos {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap; 
+}
+
+.PROJETOScard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #2E6A50;
+    height: 18.75rem;
+    width: 12.5rem;
+    border-radius: 10px;
+    margin: 1.25rem;
+    transition: 200ms;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardText {
+    border-radius: 10px;
+    background-color: #3F936E;
+    width: 100%;
+    height: 6.25rem;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.PROJETOScard a {
+    display: contents; }
+
+.cardText a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cardText p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    max-height: calc(1.3em * 3);
+    width: 100%;
+    text-align: center;
+}
+
+/* responsividade */
+@media (max-width: 767px) {
+
+    .cardsProjetos {
+        display: flex;
+        justify-content: center;
+        padding: 0 0.5rem;
+    }
+
+    .PROJETOScard {
+        
+        width: calc(50% - 1.5rem); 
+       
+        margin: 0.75rem;
+        
+        height: 16rem;
+    }
+
+   
+    .carroselText {
+        font-size: 1rem;
+    }
+
+    .PROJETOScard:hover {
+       
+        transform: scale(1.08);
+    }
+}

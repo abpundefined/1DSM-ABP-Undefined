@@ -1,0 +1,285 @@
+body {
+    /* display: flex; */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Kanit";
+}
+
+/* Container -> ///////////////////////////////////////*/
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.container>* {
+
+    width: 900px;
+}
+
+.container>section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*----------Area do Carrosel de Noticias------*/
+
+.carrosel-noticias {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+
+.imagem-carrosel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esta é a propriedade mais importante para eu fixar a imagem */
+    object-position: center; 
+    
+}
+
+.carrosel-texto {
+    position: absolute;
+    text-align: left;
+    font-size: clamp(14px, 2vw, 18px);
+    background-color: #5C725F;
+    opacity:0.9;
+    color: #fff;
+    padding: 0px 10px;
+    max-width: 100%;
+    border-radius: 0 0 15px 15px;
+    overflow-wrap: break-word;
+   
+}
+
+.arrow {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    top: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+.arrow i {
+   margin-left: -20px;
+   margin-right: -20px;
+   font-size: clamp(1.5rem, 4vw, 2rem);
+    cursor: pointer;
+   
+}
+.rightArrow{
+    
+right: 0px;
+
+}
+
+.leftArrow{
+    left: 0px;
+}
+
+/*-------- Area dos Cards de Noticias ---------*/
+
+.cards-noticias-global {
+            margin-top: 29px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 40px;
+           
+        }
+
+        .cards-noticia-geral {
+            text-align: left; 
+            width: 220px;
+            height: 420px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 0px 20px 0 20px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column; /* Define a direção como coluna que eu defini */
+        }
+
+        .cards-noticia-geral:hover {
+            transform: translateY(-5px);
+        }
+
+        .cards-imagens {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 100%;
+            height: 100px;
+        }
+
+        .cards-imagens>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .card-conjunto-texto {
+            padding: 8px;
+            flex-grow: 1; /* com este cpdigo eu consigo ocupar o espaço disponível */
+            display: flex;
+            flex-direction: column; /* Organiza o conteúdo do texto feito em coluna */
+        }
+
+        .card-noticia-data {
+            font-size: 11px;
+            color: #3F936E;
+            margin-bottom: 5px;
+        }
+
+        .card-titulo {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.3; /* espaço entre as linhas do texto */
+        }
+
+        .card-conteudo {
+            font-style: normal;
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px; 
+            flex-grow: 1; /* com este cpdigo eu consigo ocupar o espaço disponível */
+        }
+
+        .card-leiamais {
+            font-size: 14px;
+            color: #3F936E;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: auto; /* Empurra o elemento para o final do card quee eu montei */
+            padding-top: 15px;
+            flex-grow: 1;
+        } 
+
+/* ========== MEDIA QUERIES ========== */
+
+/* ------RESPONSIVIDADE-------*/
+        
+/* Tablets (até 1000px) */
+@media screen and (max-width: 1000px) {
+
+     .container > * {
+      padding: 0 10px;
+      max-width: auto;
+    }
+
+    .corpo-global {
+         gap: 12px;
+        margin-bottom: 20px;
+        width: 92%;
+
+    }
+
+   .carrosel-texto {
+        font-size: 20px;
+        padding: 0px 8px;
+    }
+
+    .cards-noticias-global {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 80%;
+        
+    }
+
+    .cards-noticia-geral{
+
+        width: auto;
+        height: auto;
+    }
+
+    .cards-imagens {
+        height: 100px;
+    }
+}
+
+/* Celulares (até 580px) */
+@media screen and (max-width: 580px) {
+
+      .container > * {
+      padding: 0 10px;
+      width: auto;
+    }
+
+    .corpo-global {
+         gap: 12px;
+        margin-bottom: 20px;
+        width: 90%;
+
+    }
+
+    .carrosel-noticias{
+
+        height: 300px;
+        width: auto;
+    }
+
+    .imagem-carrosel{
+
+        height: 300px;
+    }
+    .carrosel-texto {
+        font-size: 15px;
+        padding: 0px 8px;
+    }
+
+    .arrow {
+        width: 30px;
+    }
+
+    .cards-noticias-global {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 80%;
+    }
+
+    .cards-noticia-geral{
+
+        width: auto;
+        height: auto;
+    }
+
+    .cards-imagens {
+        height: 150px;
+    }
+
+    .card-noticia-data{
+
+        font-size: 1rem;
+    }
+
+    .card-titulo {
+        font-size: 1.5rem;
+    }
+
+    .card-conteudo {
+        font-size: 1.1rem;
+    }
+
+    .card-leiamais {
+        font-size: 1rem;
+    }
+}

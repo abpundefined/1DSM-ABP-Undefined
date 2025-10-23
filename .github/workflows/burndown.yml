@@ -1,0 +1,33 @@
+name: Generate Burndown
+
+on:
+  push:
+    paths:
+      - 'burndown/backlog_sprint*.csv'  # dispara para qualquer sprint
+
+jobs:
+  generate-burndown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install matplotlib
+        run: pip install matplotlib
+
+      - name: Generate Burndown charts
+        run: python burndown/burndown.py
+
+      - name: Commit and push Burndown images
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/burndown/*.png
+          git commit -m "Update burndown graphs" || echo "No changes to commit"
+          git push

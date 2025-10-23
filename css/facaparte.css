@@ -1,0 +1,116 @@
+/* ========= Layout "Faça Parte" ========= */
+
+/* layout padrão: texto à esquerda, imagem à direita */
+body.facaparte .container section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  background: #2E6A50; /* verde escuro */
+  color: white;
+}
+
+/* Texto */
+body.facaparte .container section .texto {
+  flex: 1;
+  padding: 20px;
+  background: transparent;
+  text-align: left;
+  color: white;
+}
+
+/* Imagem */
+body.facaparte .container section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* alterna lado apenas nas sections pares (2, 4, 6...) */
+body.facaparte .container section:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+/* Remove marcadores */
+body.facaparte .container section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.facaparte .container section li {
+  margin-bottom: 10px;
+  color: #e6fff2e3;
+}
+
+/* Títulos e parágrafos brancos */
+body.facaparte .container section h1,
+body.facaparte .container section h2,
+body.facaparte .container section h3,
+body.facaparte .container section p {
+  color: #e6fff2e3;
+}
+
+/* Links */
+body.facaparte a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.container a{
+  color: #b3ffe1ba;
+}
+
+.container a:hover{
+  color: #99e6cc; 
+  text-decoration: underline;
+
+}
+
+/* Botão "Candidatar-se agora" */
+body.facaparte button {
+  background-color: #3C8566;  
+  color: #ffffff;            
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px auto;
+  display: block;
+}
+
+body.facaparte button:hover {
+  background-color: #4CA37F;
+  color: #ffffff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  body.facaparte .container section {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    max-width: 100%;  /* impede de estourar a tela */
+  }
+
+  /* remove imagem no celular */
+  body.facaparte .container section img {
+    display: none;
+  }
+
+  body.facaparte .container section .texto {
+    padding: 15px;
+  }
+}

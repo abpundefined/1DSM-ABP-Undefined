@@ -1,0 +1,554 @@
+body {
+  /* display: flex; */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* font-family: "Kanit"; */
+  overflow-x: hidden;
+  font-family: "Saira";
+}
+
+h1,  h2{
+  font-family: "Michroma";
+}
+
+
+p {
+  margin: 0;
+}
+
+/*////////// Header - > ///////////////////////////////////////////*/
+
+/* header {
+  display: flex;                                                      
+  justify-content: center;
+  width: 100vw;
+  background-image: linear-gradient(180deg, #2e6a50 0%, #41c089 73%);
+  color: white;
+  text-shadow: 2px 2px 2px black;
+} */
+
+header {
+  display: flex;                                                      
+  justify-content: center;
+  width: 100vw;
+  /* background-image: linear-gradient(180deg, #2e6a50 0%, #41c089 73%); */
+  color: white;
+  /* text-shadow: 2px 2px 2px black; */
+}
+
+.header {
+  position: relative;
+  display: flex;
+  width: 1250px;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.agrirslab {
+  text-align: start;
+  display: flex;
+  align-items: end;
+}
+
+.arsl {
+  margin-bottom: 10px;
+}
+
+.title {
+  margin-left: 30px;
+}
+
+.logo {
+  /* display: flex;
+  justify-content: space-between; */
+  margin-top: 20px;
+  margin-right: 1rem;
+}
+
+/* .inpe{
+  background-color: var(--text-base-color);
+   border-radius: 50px;
+   border-left: solid 0.3rem white;
+   border-right: solid 0.1rem white;
+} */
+
+
+header nav .menu-button {
+  display: flex;
+  text-decoration: none;
+  color: var(--light-blue-color);
+  transition: 200ms;
+}
+
+header nav .menu-button:hover {
+  color: var(--light-green-color);
+}
+
+nav{
+  display: flex;
+  justify-content: row;
+  justify-content: space-between;  
+  align-items: center;
+  margin-right: 1.8rem;
+  
+}
+
+
+
+
+header {
+  display: flex;
+  justify-content: center;
+
+  /* background-color:#2E6A50; */
+  color: white;
+  /* text-shadow: 2px 2px 2px black; */
+}
+
+
+.agrirslab {
+  text-align: start;
+}
+
+.arsl {
+  margin-bottom: 10px;
+}
+
+.title {
+  display: flex;
+  margin-left: 30px;
+}
+
+.logo a {
+  display: flex;
+  align-self: center;
+  /* align-self: center; */
+  margin-top: 10px;
+  width: 80px;
+  aspect-ratio: 1;
+
+  /* transform: scale(1.2); */
+}
+
+.languageButton {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  right: 0px;
+  bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+
+
+.languageChangeIcon {
+  display: flex;
+}
+
+/* Interatividade Nav */
+
+.menu-button {
+  margin: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0px;
+}
+
+.sobre .menu-button {
+  position: relative;
+  display: flex;
+  margin-right: 0px;
+}
+
+
+.atuacao .menu-button {
+  position: relative;
+  display: flex;
+  margin-right: 0px;
+}
+
+.submenu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+  top: 4rem;
+  /* background-image: linear-gradient(90deg, #2E6A50 0%, #41C089 73%); */
+  background-color:var(--dark-blue-color);
+  width: 130px;
+  font-size: small;
+  text-align: start;
+  transition: 200ms;
+}
+
+.submenuAtuacao {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+  top: 4rem;
+  background-color: var(--dark-blue-color);
+  width: 130px;
+  font-size: small;
+  transition: 200ms;
+  text-align: start;
+}
+
+.submenu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.submenu a:hover {
+  color: var(--light-green-color);
+}
+
+.submenuAtuacao a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.submenuAtuacao a:hover {
+  color: var(--light-green-color);
+}
+
+.sobre:hover .submenu {
+  transform: scale(1);
+  display: flex;
+}
+
+.atuacao:hover .submenuAtuacao {
+  display: flex;
+  transform: scale(1);
+}
+
+.arrow-down {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  border: none;
+  border-top: 5px solid var(--dark-blue-color);
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  margin-left: 8px;
+
+}
+
+/* Container -> ///////////////////////////////////////*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.container>* {
+  width: 1250px;
+}
+
+
+/* footer //////////////////// */
+
+footer {
+
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(180deg, #154430 0%, #3f936e 100%);
+  color: white;
+  padding: 30px;
+  width: 100vw;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+
+#footer1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: x-large;
+}
+
+#footer1 div a {
+  margin: 0.6rem;
+  transition: 200ms;
+}
+
+#footer1 div a:hover {
+  color: blue;
+}
+
+#footer3 {
+  display: flex;
+  align-items: column;
+  width: 300px;
+}
+
+/* Ensure dynamically-inserted footer stays at the bottom of the page */
+#footer-socket footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+
+/* Link */
+
+a {
+  /* color: var(--text-base-color); */
+  text-decoration: none;
+}
+
+footer a {
+  color: var(--text-base-color);
+}
+
+/* SOBRE */
+
+.cor {
+  background-color: #3f936e;
+  width: 70vw;
+  height: 1000vh;
+}
+
+.sobrebox {
+    display: flex;
+
+}
+
+/* Adicione ao global.css */
+.main-content {
+    display: flex;
+    gap: 40px;
+    margin-top: 32px;
+}
+
+.sidebar {
+    width: 320px;
+    background: #f6fff6;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: auto; 
+    max-height: calc(100vh - 0px);
+}
+
+.filter {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.other-publications {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.publication-card {
+    background: #e6ffe6;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.publication-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.publication-detail {
+    flex: 1;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
+    min-height: 300px; /* define baseline height so page limits are based on this column */
+}
+
+.publication-detail img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 16px 0;
+    border-radius: 8px;
+}
+
+.pub-date {
+    float: right;
+    color: #888;
+    font-size: 0.95em;
+}
+
+
+
+
+
+
+/* Responsividade  */
+
+@media screen and (max-width: 1000px) {
+
+
+  body{
+    width: 100%;
+  }
+
+  /* Header Responsivo */
+  header {
+    width: 100%;
+  }
+
+  .header {
+    width: 900px;
+  }
+
+  .logo a {
+    width: 4.5rem;
+    aspect-ratio: 1;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15rem;
+    margin-left: 0px;
+    height: 102px;
+    text-align: left;
+  }
+
+  .agrirslab {
+    text-align: center;
+  }
+
+  .headerTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .headerTop h1 {
+    font-size: larger;
+    text-align: left;
+  }
+
+  .headerTop p {
+    font-size: x-small;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+
+  nav .menu-button {
+    max-width: 2.5rem;
+  }
+
+  .languageButton {
+    width: 2rem;
+    aspect-ratio: 1;
+    object-fit: contain;
+    transform: rotate(90deg);
+  }
+
+  .title h1 {
+    margin: 0;
+  }
+
+  .arsl {
+    margin: 0;
+  }
+
+  /* Container Responsivo */
+
+  .container>* {
+    max-width: 100%;
+  }
+
+
+  /* Footer*/
+
+
+  footer{
+    max-width: 100%;
+    padding: 0px;
+
+  }
+
+  .footer{
+    justify-content: space-evenly;
+    max-width: 100%;
+    
+  }
+
+  .iconsFooter {
+    font-size: x-small;
+    margin: 0px;
+  }
+
+   #footer1 div a{
+    margin: 0.3rem;
+   }
+
+  #footer1, #footer2, #footer3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  #footer1{
+    font-size: 0.7rem;
+  }
+
+  #footer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.6rem;
+  }
+
+  #footer3{
+    font-size: 0.5rem;
+    max-width: 7rem;
+  }
+
+
+
+  #footer2 img{
+    height: 2rem;
+    width: 2rem;
+
+  }
+
+  
+
+  
+
+
+
+
+}

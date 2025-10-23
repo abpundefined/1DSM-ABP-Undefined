@@ -1,0 +1,23 @@
+{
+  "name": "1dsm-abp-undefined",
+  "version": "1.0.0",
+  "description": "<h1>Undefined </h1>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abpundefined/1DSM-ABP-Undefined.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abpundefined/1DSM-ABP-Undefined/issues"
+  },
+  "homepage": "https://github.com/abpundefined/1DSM-ABP-Undefined#readme"
+}
